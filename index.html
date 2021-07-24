@@ -23,75 +23,57 @@
 
     <title>Hello, world!</title>
     <style>
-        div {
-            background-color: lightblue;
+        .slider {
+            width: 150px;
         }
 
-        .fixed {
-            width: 400px;
-            height: 400px;
-        }
-
-        .market {
-            height: 800px;
-        }
-
-        .minWidth {
-            min-width: 400px;
-        }
-
-        .maxWidth {
-            max-width: 400px;
-        }
-
-        .minHeight {
-            height: 800px;
-        }
-
-        .fixedHeight {
-            height: 400px;
+        .sliderWrapper {
+            min-width: 280px;
         }
     </style>
 </head>
 
 <body>
-    <div class="container-fluid noMargin padding">
-        <div class="row justify-content-center">
-            <div class="col text-center">
-                Round 1
-            </div>
-            <div class="col text-center">
-                Cash: $5000
-            </div>
-            <div class="col text-center">
-                Inventory: 500
+    <!-- <form>
+        <div class="form-group row">
+            <label >Example Range input</label>
+            <input type="range" class="form-control-range"
+                >
+        </div>
+        <div class="form-group row">
+            <label for="inputPassword"
+                class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword">
             </div>
         </div>
-        <div class="row justify-content-center">
-            <div class="minWidth minHeight">
-                <div class="bg-primary minWidth history fixedHeight">HISTORY
-                    <div class="col bg-primary">
-                        <div class="row bg-warning">
-                            <div class="bg-warning">BETS</div>
-                        </div>
-                        <div class="row bg-danger">
-                            <div class="bg-danger">ACTIVE ORDERS</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-success manual minWidth fixedHeight">MANUAL
-                </div>
-            </div>
-            <div class="col-8 bg-secondary market">
-                MARKET
+    </form> -->
+    <form>
+        <div class="form-group row ml-1 mr-1">
+            <div class="d-flex justify-content-between sliderWrapper">
+                <label class="mr-3">Min price: 10</label>
+                <input type="range" class="slider">
             </div>
         </div>
-        <div class="row justify-content-center">
-            <div class="minWidth fixedHeight bg-primary">ALGORITHM</div>
-            <div class="fixedHeight col-4 bg-danger">$</div>
-            <div class="col-4 fixedHeight bg-warning">INV</div>
+        <div class="form-group row ml-1 mr-1">
+            <div class="d-flex justify-content-between sliderWrapper">
+                <label class="mr-3">Max price: 10</label>
+                <input type="range" class="slider">
+            </div>
         </div>
-    </div>
+        <div class="form-group row ml-1 mr-1">
+            <div class="d-flex justify-content-between sliderWrapper">
+                <label class="mr-3">Max Volume: 50</label>
+                <input type="range" class="slider">
+            </div>
+        </div>
+        <div class="form-group row ml-1 mr-1">
+            <div class="d-flex justify-content-between sliderWrapper">
+                <label class="mr-3">Max Rate: 3</label>
+                <input type="range" class="slider">
+            </div>
+        </div>
+    </form>
 </body>
 
 </html>
